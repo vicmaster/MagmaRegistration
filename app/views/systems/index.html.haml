@@ -1,0 +1,21 @@
+%h1 Systems
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th ID
+      %th
+        = t("activerecord.attributes.system.name", :default => t("activerecord.labels.name", :default => "Name"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @systems.each do |system|
+      %tr
+        %td= system.id
+        %td= link_to system.name, system_path(system)
+        %td= system.created_at
+        %td
+          = link_to "Show", system_path(system)
+          = link_to "Edit", edit_system_path(system)
+          = link_to "Destroy", system_path(system), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+
+= link_to "New", new_system_path, :class => 'btn btn-primary'

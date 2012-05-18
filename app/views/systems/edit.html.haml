@@ -1,0 +1,3 @@
+= form_for @system, :url => system_path(@system), :html => { :class => "edit_system", :id => "edit_system" } do |f|
+  %input{:name => "_method", :type => "hidden", :value =>"put"}
+  = render :partial => "form", :locals => {:f => f}

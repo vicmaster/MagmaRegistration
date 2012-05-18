@@ -1,0 +1,19 @@
+%h1 Sudents list
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th
+        = t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name"))
+      %th registrado el:
+      %th acciones
+  %tbody
+    - @students.each do |student|
+      %tr
+        %td= link_to student.name, student_path(student)
+        %td= student.created_at
+        %td
+          = link_to "Show", student_path(student)
+          = link_to "Edit", edit_student_path(student)
+          = link_to "Destroy", student_path(student), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+
+= link_to "New", new_student_path, :class => 'btn btn-primary'

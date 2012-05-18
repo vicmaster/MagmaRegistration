@@ -1,0 +1,21 @@
+%h1 Sizes
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th ID
+      %th
+        = t("activerecord.attributes.size.name", :default => t("activerecord.labels.name", :default => "Name"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @sizes.each do |size|
+      %tr
+        %td= size.id
+        %td= link_to size.name, size_path(size)
+        %td= size.created_at
+        %td
+          = link_to "Show", size_path(size)
+          = link_to "Edit", edit_size_path(size)
+          = link_to "Destroy", size_path(size), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+
+= link_to "New", new_size_path, :class => 'btn btn-primary'

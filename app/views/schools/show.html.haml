@@ -1,0 +1,7 @@
+%label{:class => "label"}= t("activerecord.attributes.school.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @school.name
+
+.form-actions
+  = link_to "Back", schools_path, :class => 'btn'
+  = link_to "Edit", edit_school_path(@school), :class => 'btn'
+  = link_to "Delete", school_path(@school), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn'

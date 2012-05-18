@@ -1,0 +1,7 @@
+%label{:class => "label"}= t("activerecord.attributes.carrier.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @carrier.name
+
+.form-actions
+  = link_to "Back", carriers_path, :class => 'btn'
+  = link_to "Edit", edit_carrier_path(@carrier), :class => 'btn'
+  = link_to "Delete", carrier_path(@carrier), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn'

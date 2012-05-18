@@ -1,0 +1,7 @@
+%label{:class => "label"}= t("activerecord.attributes.size.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @size.name
+
+.form-actions
+  = link_to "Back", sizes_path, :class => 'btn'
+  = link_to "Edit", edit_size_path(@size), :class => 'btn'
+  = link_to "Delete", size_path(@size), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn'
