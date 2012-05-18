@@ -1,5 +1,16 @@
 MagmaRegistrations::Application.routes.draw do
+
+  get "registrations/success"
+
+  post "registrations/create"
+
+  get "registrations/index"
+
+  devise_for :users
+
   resources :systems
+
+  resources :registrations
 
   resources :sizes
 

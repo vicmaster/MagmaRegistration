@@ -1,0 +1,33 @@
+.clearfix
+  %h2 Nombre completo
+  .input
+    = text_field_tag :name
+.clearfix
+  %h2 Correo
+  .input
+    = text_field_tag :email
+.clearfix
+  %h2 Carrera
+  .input
+    = select_tag :carrier_id, options_from_collection_for_select(@carriers, "id", "name")
+.clearfix
+  %h2 Semestre
+  .input
+    = number_field_tag :current_semester
+.clearfix
+  %h2 Cuenta
+  .input
+    = text_field_tag :account_number
+.clearfix
+  %h2 Sistema operativo
+  .input
+    = select_tag :system_id, options_from_collection_for_select(@systems, "id", "name")
+.clearfix
+  %h2 Medida de playera
+  .input
+    = select_tag :size_id, options_from_collection_for_select(@sizes, "id", "name")
+
+.form-actions
+  %button{:class => "btn primary", :type => "submit"} Save
+  or
+  = link_to "Cancel", students_path

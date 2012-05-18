@@ -1,0 +1,16 @@
+%label{:class => "label"}= t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @student.name
+%label{:class => "label"}= t("activerecord.attributes.student.email", :default => t("activerecord.labels.email", :default => "Email")) + ":"
+%p= @student.email
+%label{:class => "label"}= t("activerecord.attributes.student.carrier_id", :default => t("activerecord.labels.carrier_id", :default => "Carrier")) + ":"
+%p= @student.carrier.name
+%label{:class => "label"}= t("activerecord.attributes.student.current_semester", :default => t("activerecord.labels.current_semester", :default => "Current semester")) + ":"
+%p= @student.current_semester
+%label{:class => "label"}= t("activerecord.attributes.student.account_number", :default => t("activerecord.labels.account_number", :default => "Account number")) + ":"
+%p= @student.account_number
+%label{:class => "label"}= t("activerecord.attributes.student.os_id", :default => t("activerecord.labels.os_id", :default => "Os")) + ":"
+%p= @student.os.name
+%label{:class => "label"}= t("activerecord.attributes.student.shirt_size_id", :default => t("activerecord.labels.shirt_size_id", :default => "Shirt size")) + ":"
+%p= @student.shirt_size.name
+
+
