@@ -6,4 +6,5 @@ class Student < ActiveRecord::Base
 
 
   validates :account_number, :email,  presence: true
+  validates :email, uniqueness: true
 end

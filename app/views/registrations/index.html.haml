@@ -1,2 +1,10 @@
-= form_tag registrations_create_path, method: 'post', :html => { :class => :form }
-= render :partial => "form"
+- if @student.errors.any?
+  .alert.alert-error
+    - @student.errors.full_messages.each do |message|
+      %p= message
+- if @success
+  .alert.alert-success
+    Gracias por tu registro.
+.registrations
+  = form_for @student, :url => registrations_create_path do |f|
+    = render :partial => "form", :locals => {:f => f}
