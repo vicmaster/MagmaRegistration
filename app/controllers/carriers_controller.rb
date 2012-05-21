@@ -1,4 +1,5 @@
 class CarriersController < ApplicationController
+  before_filter :authenticate_user!
   layout 'frontend'
   # GET /carriers
   # GET /carriers.json

@@ -1,4 +1,5 @@
 class SizesController < ApplicationController
+  before_filter :authenticate_user!
   layout 'frontend'
   # GET /sizes
   # GET /sizes.json
