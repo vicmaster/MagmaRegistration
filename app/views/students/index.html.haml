@@ -4,13 +4,15 @@
     %tr
       %th
         = t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name"))
-      %th registrado el:
+      %th Correo
+      %th Cuenta
       %th acciones
   %tbody
     - @students.each do |student|
       %tr
         %td= link_to student.name, student_path(student)
-        %td= student.created_at
+        %td= student.email
+        %td= student.account_number
         %td
           = link_to "Show", student_path(student)
           = link_to "Edit", edit_student_path(student)
