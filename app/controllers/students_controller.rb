@@ -42,6 +42,7 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
     @systems = System.all
+    @sizes = Size.all
     @carriers= Carrier.all
     @schools = School.all
     @student = Student.find(params[:id])
