@@ -1,7 +1,9 @@
 %h1 Sudents list
+- counter = 1
 %table{:class => "table table-striped"}
   %thead
     %tr
+      %th #
       %th
         = t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name"))
       %th Correo
@@ -10,6 +12,8 @@
   %tbody
     - @students.each do |student|
       %tr
+        %td= counter
+        - counter = counter + 1
         %td= link_to student.name, student_path(student)
         %td= student.email
         %td= student.account_number
