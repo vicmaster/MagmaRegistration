@@ -5,6 +5,6 @@ class Student < ActiveRecord::Base
   belongs_to :system
 
 
-  validates :account_number, :email,  presence: true
+  validates :email,  presence: true
   validates :email, uniqueness: true
 end
