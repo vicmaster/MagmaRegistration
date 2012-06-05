@@ -7,6 +7,22 @@
   .input
     = f.text_field :email
 .clearfix
+  %h2 Twitter
+  .input
+    = f.text_field :twitter
+.clearfix
+  %h2 Lugar donde nos visita?
+  .input
+    = f.text_field :place
+.clearfix
+  %h2 Empresa
+  .input
+    = f.text_field :enterprise
+.clearfix
+  %h2 Genero
+  .input
+    = f.select :gender, options_for_select(['Masculino', 'Femenino'])
+.clearfix
   %h2 Carrera
   .input
     = f.select :carrier_id, options_from_collection_for_select(@carriers, "id", "name")
@@ -15,17 +31,11 @@
   .input
     = f.number_field :current_semester
 .clearfix
-  %h2 Cuenta
-  .input
-    = f.text_field :account_number
-.clearfix
+
   %h2 Sistema operativo
   .input
     = f.select :system_id, options_from_collection_for_select(@systems, "id", "name")
 .clearfix
-  %h2 Medida de playera
-  .input
-    = f.select :size_id, options_from_collection_for_select(@sizes, "id", "name")
 
 .form-actions
   %button{:class => "btn primary", :type => "submit"} Save

@@ -7,7 +7,10 @@
       %th
         = t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name"))
       %th Correo
-      %th Cuenta
+      %th Twitter
+      %th Lugar
+      %th Empresa
+      %th Genero
       %th acciones
   %tbody
     - @students.each do |student|
@@ -16,7 +19,10 @@
         - counter = counter + 1
         %td= link_to student.name, student_path(student)
         %td= student.email
-        %td= student.account_number
+        %td= student.twitter
+        %td= student.place
+        %td= student.enterprise
+        %td= student.gender
         %td
           = link_to "Show", student_path(student)
           = link_to "Edit", edit_student_path(student)

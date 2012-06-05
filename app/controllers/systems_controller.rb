@@ -1,6 +1,6 @@
 class SystemsController < ApplicationController
   before_filter :authenticate_user!
-  layout 'frontend'
+  layout 'backend'
   # GET /systems
   # GET /systems.json
   def index

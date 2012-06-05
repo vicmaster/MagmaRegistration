@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   before_filter :authenticate_user!
 
-  layout 'frontend'
+  layout 'backend'
   # GET /students
   # GET /students.json
   def index

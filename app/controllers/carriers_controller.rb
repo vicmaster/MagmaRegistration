@@ -1,6 +1,6 @@
 class CarriersController < ApplicationController
   before_filter :authenticate_user!
-  layout 'frontend'
+  layout 'backend'
   # GET /carriers
   # GET /carriers.json
   def index
