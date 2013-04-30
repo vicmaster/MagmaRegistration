@@ -24,7 +24,8 @@
     = f.text_field :rfc
 .clearfix
   %h2 Fecha de Nacimiento
-  .input= date_select :params, :birth_date
+  .input
+    = f.date_select :birth_date, :order => [:day, :month, :year]
 .clearfix
   %h2 CURP
   .input
