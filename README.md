@@ -15,7 +15,7 @@ $ rake db:setup
 ## Rails Console
 
 ```
-User.new({:email => "victor.velazquez@gmail.com", :password => 123456}).save!
+User.new({:email => "user@email.com", :password => 123456}).save!
 ```
 ## Run Application
 
