@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605204219) do
+ActiveRecord::Schema.define(:version => 20130426225545) do
 
   create_table "carriers", :force => true do |t|
     t.string   "name"
@@ -69,6 +69,9 @@ ActiveRecord::Schema.define(:version => 20120605204219) do
     t.string   "twitter"
     t.string   "place"
     t.string   "enterprise"
+    t.string   "rfc"
+    t.datetime "birth_date"
+    t.string   "curp"
   end
 
   create_table "systems", :force => true do |t|

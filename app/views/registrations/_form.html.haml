@@ -19,6 +19,18 @@
   .input
     = f.text_field :enterprise
 .clearfix
+  %h2 RFC
+  .input
+    = f.text_field :rfc
+.clearfix
+  %h2 Fecha de Nacimiento
+  .input
+    = f.date_select :birth_date, :order => [:day, :month, :year]
+.clearfix
+  %h2 CURP
+  .input
+    = f.text_field :curp
+.clearfix
   %h2 Genero
   .input
     = f.select :gender, options_for_select(['Masculino', 'Femenino'])
@@ -31,7 +43,6 @@
   .input
     = f.number_field :current_semester
 .clearfix
-
   %h2 Sistema operativo
   .input
     = f.select :system_id, options_from_collection_for_select(@systems, "id", "name")

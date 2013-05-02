@@ -11,7 +11,10 @@
       %th Lugar
       %th Empresa
       %th Genero
-      %th acciones
+      %th Fecha de Nacimiento
+      %th RFC
+      %th CURP
+      %th Acciones
   %tbody
     - @students.each do |student|
       %tr
@@ -23,9 +26,12 @@
         %td= student.place
         %td= student.enterprise
         %td= student.gender
-        %td
-          = link_to "Show", student_path(student)
-          = link_to "Edit", edit_student_path(student)
-          = link_to "Destroy", student_path(student), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+        %td= student.birth_date
+        %td= student.rfc
+        %td= student.curp
+        %td.btn-group
+          = link_to "Show", student_path(student), :class => "btn"
+          = link_to "Edit", edit_student_path(student), :class => "btn"
+          = link_to "Destroy", student_path(student), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => "btn"
 
 = link_to "New", new_student_path, :class => 'btn btn-primary'
