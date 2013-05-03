@@ -24,8 +24,8 @@
         %td= attendee.enterprise
         %td= attendee.gender
         %td
-          = link_to "Show", attendee_path(attendee)
+          = link_to "Ver", attendee_path(attendee)
           |
-          = link_to "Edit", edit_attendee_path(attendee)
+          = link_to "Editar", edit_attendee_path(attendee)
           |
-          = link_to "Destroy", attendee_path(attendee), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+          = link_to "Eliminar", attendee_path(attendee), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"

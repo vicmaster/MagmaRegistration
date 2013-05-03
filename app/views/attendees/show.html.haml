@@ -18,10 +18,19 @@
       %h2 Empresa
       %p= @attendee.enterprise
     .clearfix
-      %h2 Genero
-      %p= @attendee.gender
+      %h2 RFC
+      %p= @attendee.rfc
+    .clearfix
+      %h2 Fecha de Nacimiento
+      %p= @attendee.birth_date
 
   .right.span4
+    .clearfix
+      %h2 CURP
+      %p= @attendee.curp
+    .clearfix
+      %h2 Genero
+      %p= @attendee.gender
     .clearfix
       %h2 Carrera
       %p= @attendee.carrier
