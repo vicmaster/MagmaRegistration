@@ -28,16 +28,16 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"}MagmaConf Check In / June 2013
+          %a.brand{:href => root_path}MagmaConf Check In / June 2013
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Admin", students_path
+              %li= link_to "Admin", admin_dashboard_index_path
 
     .container
 
       .content
         .row
-          .span9
+          #main.span10
             = yield
           .span1 &nbsp;
 

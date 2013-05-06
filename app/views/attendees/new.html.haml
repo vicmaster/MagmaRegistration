@@ -1,0 +1,11 @@
+%img{:alt => "Logo", class: 'logo', :src => "/assets/railero.svg"}
+- if @attendee.errors.any?
+  .alert.alert-error.span9
+    - @attendee.errors.full_messages.each do |message|
+      %p= message
+- if flash[:notice]
+  .alert.alert-success.span9
+    Gracias por tu registro.
+.registrations.span9
+  = form_for @attendee, :url => attendees_path do |f|
+    = render :partial => "form", :locals => {:f => f}
