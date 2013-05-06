@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130426225545) do
+ActiveRecord::Schema.define(:version => 20130501151133) do
+
+  create_table "attendees", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "carrier"
+    t.integer  "current_semester"
+    t.string   "account_number"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "size_id"
+    t.integer  "system_id"
+    t.string   "gender"
+    t.string   "twitter"
+    t.string   "place"
+    t.string   "enterprise"
+    t.string   "rfc"
+    t.datetime "birth_date"
+    t.string   "curp"
+  end
 
   create_table "carriers", :force => true do |t|
     t.string   "name"
@@ -53,25 +72,6 @@ ActiveRecord::Schema.define(:version => 20130426225545) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "students", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "carrier_id"
-    t.integer  "current_semester"
-    t.string   "account_number"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "size_id"
-    t.integer  "system_id"
-    t.string   "gender"
-    t.string   "twitter"
-    t.string   "place"
-    t.string   "enterprise"
-    t.string   "rfc"
-    t.datetime "birth_date"
-    t.string   "curp"
   end
 
   create_table "systems", :force => true do |t|

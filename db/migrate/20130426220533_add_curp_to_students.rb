@@ -1,5 +1,5 @@
 class AddCurpToStudents < ActiveRecord::Migration
   def change
-    add_column :students, :curp, :string
+    add_column :attendees, :curp, :string
   end
 end

@@ -1,0 +1,13 @@
+= link_to '< Atras', attendees_path, class: "btn btn-primary btn-large back"
+
+- if @attendee.errors.any?
+  .alert.alert-error.span9
+    - @attendee.errors.full_messages.each do |message|
+      %p= message
+- if flash[:notice]
+  .alert.alert-success.span9
+    Gracias por tu registro.
+
+.registrations.span9
+  = form_for @attendee, :url => attendee_path(@attendee), :html => { :class => "edit_attendee", :id => "edit_attendee" } do |f|
+    = render :partial => "form", :locals => {:f => f}

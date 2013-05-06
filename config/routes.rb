@@ -18,7 +18,15 @@ MagmaRegistrations::Application.routes.draw do
 
   resources :carriers
 
-  resources :students
+  resources :attendees
+
+  namespace :admin do
+    resources :dashboard
+  end
+
+  match 'admin/attendees' => 'attendees#index'
+  match 'admin/schools' => 'schools#index'
+  match 'admin/career' => 'carriers#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -69,7 +77,7 @@ MagmaRegistrations::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'registrations#index'
+  root :to => 'attendees#new'
 
   # See how all your routes lay out with "rake routes"
 
