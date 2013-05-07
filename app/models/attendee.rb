@@ -2,7 +2,6 @@ class Attendee < ActiveRecord::Base
   belongs_to :size
   belongs_to :system
 
-
   validates :email,  presence: true
   validates :email, uniqueness: true
 
@@ -17,8 +16,5 @@ class Attendee < ActiveRecord::Base
       name: 'Masculino',
       count: self.gender_count('Masculino').count
     }]
-  end
-
-  def create
   end
 end
