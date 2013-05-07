@@ -29,3 +29,4 @@
           = link_to "Editar", edit_attendee_path(attendee)
           |
           = link_to "Eliminar", attendee_path(attendee), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+= link_to image_tag("pdf.png", :border => 0, :width => '90', :alt => '', :title => ''), attendees_pdf_path

@@ -24,9 +24,11 @@ MagmaRegistrations::Application.routes.draw do
     resources :dashboard
   end
 
+  match 'attendees-pdf' => 'pdfs#generate_pdf', :as => :attendees_pdf
+
+  match 'admin/career' => 'carriers#index'
   match 'admin/attendees' => 'attendees#index'
   match 'admin/schools' => 'schools#index'
-  match 'admin/career' => 'carriers#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

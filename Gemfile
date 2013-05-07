@@ -7,6 +7,9 @@ gem 'sqlite3'
 gem 'haml-rails'
 gem 'thin'
 gem "devise"
+gem 'pdfkit'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 gem 'jquery-rails'
 

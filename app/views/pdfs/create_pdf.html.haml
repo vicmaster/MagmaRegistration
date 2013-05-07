@@ -1,0 +1,54 @@
+<!doctype html>
+%html.no-js{:dir => "ltr", :lang => "en"}
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+  %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %meta{:content => "width=device-width", :name => "viewport"}/
+  %title Attendees Report
+  %body
+    #attendee.paid
+      #header
+        .attendee-intro
+          %img{ src: @logo_url}
+        %dl.attendee-meta
+          %dt.attendee-date Date
+          %dd 
+            = Time.now.strftime("%m/%d/%Y")
+      .clear
+      / e: invoice partis
+      %section
+        .attendees
+          %table
+            %thead
+              %tr
+                %th Name
+                %th Correo
+                %th Twitter
+                %th Lugar
+                %th Empresa
+                %th Genero
+            %tbody
+            - for attendee in @attendees
+              %tr
+                %th
+                  = attendee.name
+                %th
+                  = attendee.email
+                %th
+                  = attendee.twitter
+                %td
+                  = attendee.place
+                %td
+                  = attendee.place
+                %td
+                  = attendee.gender
+
+            %tfoot
+              %tr
+                %th
+                %th
+                %th
+                %th
+                %th
+                  %strong TOTAL ATTENDESS
+                %th 
+                  = @attendees.count
