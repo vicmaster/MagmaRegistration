@@ -22,3 +22,9 @@ group :assets do
   gem 'lazy_high_charts'
   gem 'twitter-bootstrap-rails'
 end
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+  gem 'capybara-webkit'
+  gem 'capybara'
+end
