@@ -35,7 +35,6 @@ class AttendeesController < ApplicationController
     @attendee = Attendee.find(params[:id])
   end
 
-
   def create
     @attendee = Attendee.new(params[:attendee])
 
