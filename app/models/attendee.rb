@@ -17,4 +17,25 @@ class Attendee < ActiveRecord::Base
       count: self.gender_count('Masculino').count
     }]
   end
+
+  def self.system_statistics
+    systems = self.all.map{|attendee| attendee.system.name}
+    system = systems.uniq.inject({}) {|accu, uni| accu.merge({ uni => systems.select{|i| i == uni } })}
+    [{
+      name: 'Windows',
+      count: system['Windows'].try(:count) || 0
+    },
+    {
+      name: 'Mac',
+      count: system['Mac'].try(:count) || 0
+    },
+    {
+      name: 'Linux',
+      count: system['Linux'].try(:count) || 0
+    },
+    {
+      name: 'Other',
+      count: system['Other'].try(:count) || 0
+    }]
+  end
 end

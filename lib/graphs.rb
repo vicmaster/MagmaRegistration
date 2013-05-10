@@ -22,7 +22,7 @@ class Graphs
       type: options[:type],
       name: options[:name],
       data: parse_data(options[:data]),
-      size: 250
+      size: 200
     )
 
    @graph

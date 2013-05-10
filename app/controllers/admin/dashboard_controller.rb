@@ -5,9 +5,10 @@ class Admin::DashboardController < ApplicationController
   layout 'backend'
 
   def index
-    chart = Graphs.new
-    @gender_chart = render_charts chart, 'gender', Attendee.gender_statistics
-    @place_chart = render_charts chart, 'place', Attendee.gender_statistics
+    gender_chart = Graphs.new
+    @gender_chart = render_charts gender_chart, 'gender', Attendee.gender_statistics
+    system_chart = Graphs.new
+    @system_chart = render_charts system_chart, 'system', Attendee.system_statistics
   end
 
   def new
