@@ -31,7 +31,11 @@
           %a.brand{:href => root_path}MagmaConf Check In / June 2013
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Admin", admin_dashboard_index_path
+              - if user_signed_in?
+                %li= link_to "Admin", admin_dashboard_index_path
+                %li= link_to('Logout', destroy_user_session_path, :method => :delete)
+              - else
+                %li= link_to "Login", admin_dashboard_index_path
 
     .container
 
