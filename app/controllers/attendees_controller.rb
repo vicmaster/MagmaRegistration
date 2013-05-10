@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:create, :new]
   before_filter :load_data, only: [:new, :edit, :create, :update]
 
   layout :select_layout
