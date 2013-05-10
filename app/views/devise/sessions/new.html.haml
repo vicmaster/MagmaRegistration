@@ -1,0 +1,16 @@
+#login
+  %h2 Sign in
+  .login-background
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      .control-group
+        = f.label :email, class: "control-label"
+        %br/
+        = f.email_field :email, :autofocus => true, placeholder: "Email"
+        = f.label :password, class: "control-label"
+        %br/
+        = f.password_field :password, placeholder: "Password"
+        - if devise_mapping.rememberable?
+          .remember-check
+            = f.check_box :remember_me
+            = f.label :remember_me
+          = f.submit "Sign in", class: "btn btn-primary btn-large"
