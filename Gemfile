@@ -27,4 +27,6 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem 'capybara-webkit'
   gem 'capybara'
+  gem 'debugger'
+  gem 'factory_girl'
 end
