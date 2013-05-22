@@ -29,13 +29,13 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => root_path }MagmaConf Check In / June 2013
+          %a.brand{:href => root_path }MagmaConf Check In
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Dashboard", admin_dashboard_index_path
-              %li= link_to "Attendees", admin_attendees_path
-              %li= link_to "Schools", admin_schools_path
-              %li= link_to "Career", admin_career_path
+              %li= link_to "Estadisticas", admin_dashboard_index_path
+              %li= link_to "Asistentes", admin_attendees_path
+              %li= link_to "Escuelas", admin_schools_path
+              %li= link_to "Carreras", admin_career_path
               - if user_signed_in?
                 %li
                   = link_to('Logout', destroy_user_session_path, :method => :delete)
