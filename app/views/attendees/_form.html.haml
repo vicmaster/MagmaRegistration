@@ -26,7 +26,7 @@
   .clearfix
     %h2 Fecha de Nacimiento
     .input.date
-      = f.date_select :birth_date, :order => [:day, :month, :year]
+      = f.date_select :birth_date, :order => [:day, :month, :year], :start_year => 1960, :end_year => 2003, :default => { :year => 1990 }
 
 .right.span4
   .clearfix
