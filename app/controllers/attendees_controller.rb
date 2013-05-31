@@ -5,8 +5,13 @@ class AttendeesController < ApplicationController
   layout :select_layout
 
   def index
-    @attendees = Attendee.all
-
+    if params[:q]
+      @attendees = Attendee.where('name LIKE ?', "%#{params[:q]}%")
+      @search_string = "Resultados para '#{params[:q]}' - #{@attendees.size} resultados"
+    else
+      @attendees = Attendee.all
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @attendees }

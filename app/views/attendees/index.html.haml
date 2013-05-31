@@ -1,5 +1,15 @@
 %h1 Lista de Asistentes
 - counter = 1
+
+= form_tag 'attendees', :method => :get, id: 'search-form' do
+  = text_field_tag 'q', nil, :placeholder=> 'buscar por nombre'
+  = submit_tag 'Buscar', :class => 'btn btn-inverse btn-small'
+
+= link_to 'Todos', 'attendees', :class => 'btn btn-small'
+
+%h3 
+  = @search_string
+
 %table{id: 'attendees', class: "table"}
   %thead
     %tr
