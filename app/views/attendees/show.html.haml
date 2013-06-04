@@ -3,6 +3,9 @@
 #attendees.span9
   .left.span4
     .clearfix
+      %h2 No. de Boletia
+      %p= @attendee.account_number
+    .clearfix
       %h2 Nombre
       %p= @attendee.name
     .clearfix
@@ -18,13 +21,16 @@
       %h2 Empresa
       %p= @attendee.enterprise
     .clearfix
+      %h2 Puesto
+      %p= @attendee.employment
+
+  .right.span4
+    .clearfix
       %h2 RFC
       %p= @attendee.rfc
     .clearfix
       %h2 Fecha de Nacimiento
       %p= @attendee.birth_date
-
-  .right.span4
     .clearfix
       %h2 CURP
       %p= @attendee.curp
@@ -34,12 +40,6 @@
     .clearfix
       %h2 Carrera
       %p= @attendee.carrier
-    .clearfix
-      %h2 Semestre
-      %p= @attendee.current_semester
-    .clearfix
-      %h2 No. Cuenta
-      %p= @attendee.account_number
     .clearfix
       %h2 Sistema operativo
       %p= @attendee.system.try(:name)

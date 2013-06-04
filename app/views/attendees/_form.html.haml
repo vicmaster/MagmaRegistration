@@ -1,5 +1,9 @@
 .left.span4
   .clearfix
+    %h2 No de Boletia
+    .input
+      = f.text_field :account_number, class: 'text_field span3'
+  .clearfix
     %h2 Nombre completo
     .input
       = f.text_field :name, class: 'text_field span3'
@@ -20,15 +24,14 @@
     .input
       = f.text_field :enterprise, class: 'text_field span3'
   .clearfix
-    %h2 RFC
+    %h2 Puesto
     .input
-      = f.text_field :rfc, class: 'text_field span3'
+      = f.text_field :employment, class: 'text_field span3'
+.right.span4
   .clearfix
     %h2 Fecha de Nacimiento
     .input.date
       = f.date_select :birth_date, :order => [:day, :month, :year], :start_year => 1960, :end_year => 2003, :default => { :year => 1990 }
-
-.right.span4
   .clearfix
     %h2 CURP
     .input
@@ -41,14 +44,6 @@
     %h2 Carrera
     .input
       = f.text_field :carrier, class: 'text_field span3'
-  .clearfix
-    %h2 Semestre
-    .input
-      = f.number_field :current_semester, class: 'text_field span3'
-  .clearfix
-    %h2 Cuenta
-    .input
-      = f.text_field :account_number, class: 'text_field span3'
   .clearfix
     %h2 Sistema operativo
     .input

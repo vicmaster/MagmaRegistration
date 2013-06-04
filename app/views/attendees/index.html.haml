@@ -16,23 +16,29 @@
       %th #
       %th
         = t("activerecord.attributes.student.name", :default => t("activerecord.labels.name", :default => "Name"))
+      %th Genero
       %th Correo
       %th Twitter
       %th Lugar
       %th Empresa
-      %th Genero
-      %th acciones
+      %th Puesto
+      %th RFC
+      %th CURP
+      %th Acciones
   %tbody
     - @attendees.each do |attendee|
       %tr
         %td= counter
         - counter = counter + 1
         %td= link_to attendee.name, attendee_path(attendee)
+        %td= attendee.gender
         %td= attendee.email
         %td= attendee.twitter
         %td= attendee.place
         %td= attendee.enterprise
-        %td= attendee.gender
+        %td= attendee.employment
+        %td= attendee.rfc
+        %td= attendee.curp
         %td
           = link_to "Ver", attendee_path(attendee)
           |
