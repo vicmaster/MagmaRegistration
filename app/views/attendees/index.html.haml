@@ -22,8 +22,7 @@
       %th Lugar
       %th Empresa
       %th Puesto
-      %th RFC
-      %th CURP
+      %th Carrera
       %th Acciones
   %tbody
     - @attendees.each do |attendee|
@@ -37,8 +36,7 @@
         %td= attendee.place
         %td= attendee.enterprise
         %td= attendee.employment
-        %td= attendee.rfc
-        %td= attendee.curp
+        %td= attendee.carrier
         %td
           = link_to "Ver", attendee_path(attendee)
           |

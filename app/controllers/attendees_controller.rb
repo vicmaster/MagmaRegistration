@@ -11,7 +11,7 @@ class AttendeesController < ApplicationController
     else
       @attendees = Attendee.all
     end
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @attendees }

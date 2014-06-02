@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(:version => 20130604164155) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "employments", :force => true do |t|
+    t.string "name"
+  end
+
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -57,12 +61,6 @@ ActiveRecord::Schema.define(:version => 20130604164155) do
   add_index "installs", ["email"], :name => "index_installs_on_email", :unique => true
   add_index "installs", ["reset_password_token"], :name => "index_installs_on_reset_password_token", :unique => true
 
-  create_table "os", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "schools", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -73,25 +71,6 @@ ActiveRecord::Schema.define(:version => 20130604164155) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "students", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "carrier_id"
-    t.integer  "current_semester"
-    t.string   "account_number"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "size_id"
-    t.integer  "system_id"
-    t.string   "gender"
-    t.string   "twitter"
-    t.string   "place"
-    t.string   "enterprise"
-    t.string   "rfc"
-    t.datetime "birth_date"
-    t.string   "curp"
   end
 
   create_table "systems", :force => true do |t|
