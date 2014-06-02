@@ -1,4 +1,7 @@
-#main-backend { width: 1320px; }
+#main-backend { 
+  width: 1320px; 
+  color: #fff;
+}
 #gender_chart, #system_chart {
   display: inline-block;
   width: 500px;
@@ -26,13 +29,25 @@ table {
 .back { margin-left: 30px; }
 
 #attendees {
+  width: 80%;
   padding: 19px 20px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   border-radius: 5px;
   ms-border-radius: 5px;
   mz-border-radius: 5px;
   webkit-border-radius: 5px;
+}
+
+#search-form{
+  display: block;
+  float: right;
+  font-size: 0;
+  right: 260px;
+  position: relative;
+  .btn{
+    line-height: 23px;
+    vertical-align: top;
+  }
 }

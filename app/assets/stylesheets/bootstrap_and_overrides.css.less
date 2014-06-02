@@ -7,17 +7,38 @@
 
 // Your custom LESS stylesheets goes here
 body{
-  background-image: url('download.png');
+  background: #312926;
   background-repeat: repeat;
 }
 .navbar {
  .frontend, .backend{
    background-image: url('download.jpeg');
    background-repeat: repeat-x;
+   height: 40px;
    .container{
+     height: 10px;
+     position: relative;
+     top: -62px;
      a{
        color: white;
      }
+   }
+ }
+ .frontend {
+   .nav {
+     position: relative;
+     float: left;
+     margin: 0 10px 0 0;
+     left: 80%;
+   }
+ }
+ .backend {
+   .nav {
+     left: 229px;
+   }
+   .nav > li:last-child{
+     left: 400px;
+     position: relative;
    }
  }
 }
@@ -61,6 +82,13 @@ body{
 #main {
   h1 {
     color: white;
+    text-align: center;
+  }
+}
+
+footer {
+  p {
+    color: #fff;
     text-align: center;
   }
 }

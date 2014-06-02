@@ -12,6 +12,15 @@
   margin-right: auto;
 }
 
+.container {
+  background-image: url('background-image.png');
+  background-repeat: repeat;
+  background-position: -105px -105px;
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 1200px;
+}
+
 .registrations{
   padding: 19px 20px 20px;
   margin-top: 20px;
@@ -43,12 +52,3 @@ select { width: 270px; }
   select#attendee_birth_date_1i { width: 80px; }
 }
 
-#search-form{
-  display: block;
-  float: right;
-  font-size: 0;
-  .btn{
-    line-height: 23px;
-    vertical-align: top;
-  }
-}
