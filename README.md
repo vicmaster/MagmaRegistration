@@ -3,20 +3,16 @@ MagmaConf Check In App
 
 MagmaConf Check In application for Conferences.
 
-
 ## Installation
 
 ```
 $ git clone git@github.com:vicmaster/MagmaRegistration.git
 $ bundle install
 $ rake db:setup
+$ rake db:migrate RAILS_ENV=test
+$ rake db:seed
 ```
 
-## Rails Console
-
-```
-User.new({:email => "user@email.com", :password => 123456}).save!
-```
 ## Run Application
 
 ```
